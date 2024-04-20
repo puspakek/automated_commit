@@ -4,7 +4,7 @@ on:
   push:
     branches: [master] # Ensures the workflow triggers on pushes to master
   schedule:
-    - cron: '* * * * *'
+    - cron: */1 * * * *
   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
 permissions:
