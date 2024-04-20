@@ -1,8 +1,13 @@
 name: Automated Commit
 
 on:
+  push:
+    branches: [master] # Ensures the workflow triggers on pushes to master
+
   schedule:
-    - cron: '*/5 * * * *' # Executes every 5 minutes
+    - cron: '*/5 * * * *' # Executes every 12 hours
+
+  workflow_dispatch: # Allows manual triggering from the GitHub UI
 
 permissions:
   contents: write # Grants permissions to write to the repo
